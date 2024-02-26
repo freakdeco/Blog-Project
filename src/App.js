@@ -5,15 +5,11 @@ import Card from './components/card';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <div className="App">
-      <h1>Card</h1>
-      <Card />
-    </div>
-      </header>
+    <div className = "App">
+      <h1 className = 'text-red-500 text-5xl'> Hello World!</h1>
+
     </div>
   );
-}
+};
 
 export default App;
