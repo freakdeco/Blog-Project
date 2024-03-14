@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BreadCrumbs from "../../components/BreadCrumbs";
+import CommentsContainer from "../../components/comments/CommentsContainer";
 import MainLayout from "../../components/MainLayout";
 import { images } from "../../constants";
 import SuggestedPosts from "./container/SuggestedPosts";
@@ -70,12 +71,12 @@ const ArticleDetailPage = () => {
           </h1>
           <div className="mt-4 text-dark-soft">
             <p className="leading-7">
-            Lana Del Rey is one part songwriting superpower, one part constructed character,
-             building a Southern California dream world of manufactured melancholy and genuine glamour 
-             in her stylized, meticulously arranged noir-pop songs and becoming an incredibly influential
-              indie superstar in the process.
+            Lana Del Rey is one part songwriting superpower,
+            one part constructed character, building a Southern California dream world of manufactured melancholy and genuine glamour in her stylized,
+            meticulously arranged noir-pop songs and becoming an incredibly influential indie superstar in the process. 
             </p>
           </div>
+          <CommentsContainer className="mt-10" logginedUserId="a" />
         </article>
         <SuggestedPosts
           header="Latest Article"
