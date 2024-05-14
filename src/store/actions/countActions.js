@@ -1,18 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { countActions } from "../reducers/countReducers";
 
-const countInitialState = { number: 0 };
+export const changeCount = (type) => (dispatch, getState) => {
+  const { count } = getState();
 
-const countSlice = createSlice({
-  name: "count",
-  initialState: countInitialState,
-  reducers: {
-    countChange(state, action) {
-      state.number = action.payload;
-    },
-  },
-});
-
-const countActions = countSlice.actions;
-const countReducer = countSlice.reducer;
-
-export { countActions, countReducer };
+  if (type === "INCREASE") {
+    dispatch(countActions.countChange(count.number + 1));
+  } else {
+    dispatch(countActions.countChange(count.number - 1));
+  }
+};
+export default changeCount;
